@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script
+    src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+    </script>
+    <div id="app">
+        <!-- メモ -->
+        <p v-once>{{message}}</p> <!--一度表示されたら、以降は更新を反映しない-->
+        <p>{{number+5}}</p>
+        <p>{{ok ? 'YES':'NO'}}</p>
+        <p>{{sayHi()}}</p>
+        <p>{{sayHi2()}}</p>
+        <p v-text="message"></p><br><!--メッセージ表示-->
+        <button v-on:click="reverseMessage">メッセージ反転</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'HelloWorld',
+                number:3,
+                of: false
+            },
+            methods: {
+                reverseMessage: function (){
+                    this.message = this.message.split("").reverse().join("")
+                },
+                sayHi: function (){
+                    return 'Hi'
+                },
+                sayHi2: function (){
+                    this.message ='Hello VueJs'
+                    return 'Hi2';
+                }
+            }
+        })
+    </script>
+</body>
+</html>
