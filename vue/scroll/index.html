@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js 3</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="app">
+    <v-app id="inspire">
+      <div>
+        <v-row
+          justify="center"
+          align="center"
+        >
+          <v-subheader>Offset Top</v-subheader>
+          {{ offsetTop }}
+        </v-row>
+        <v-container
+          id="scroll-target"
+          style="max-height: 400px"
+          class="overflow-y-auto"
+        >
+          <v-row
+            v-scroll:#scroll-target="onScroll"
+            align="center"
+            justify="center"
+            style="height: 1000px"
+          >
+          </v-row>
+        </v-container>
+      </div>
+    </v-app>
+  </div>
+  <script src="https://unpkg.com/vue@3.1.5"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

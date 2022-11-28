@@ -4,4 +4,25 @@
 
 #app li > span.done {
   text-decoration: line-through;
+  color: red;
+}
+
+.box {
+  border-left: 5px double skyblue;
+  border-right: 5px double skyblue;
+  background-color: #eee;
+  padding: 2em;
+}
+
+.input_text {
+  color: red;
+  background-color: blue;
+  margin: 0;
+  width: 90%;
+  height: 10vh;
+}
+
+
+.button_del {
+  color: red;
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../vue.js"></script>
+    <div id="app">
+        <p>カウント：{{ number }}</p>
+        <!-- v-onの後ろに配置できるイベント一覧 https://developer.mozilla.org/ja/docs/Web/Events -->
+        <button v-on:click="number += 1">カウントアップ</button>
+        <button v-on:click="countUp">カウントアップ2</button>
+        <p v-on:mousemove="changeMousePosition($event,3)">マウスを載せてください
+            <span v-on:mousemove="noEvent">反応しないでください</span>
+        </p>
+        <p>X:{{x}},Y:{{y}}</p>
+
+        <p v-on:mousemove="changeMousePosition2($event,3)">マウスを載せてください
+            <span v-on:mousemove.stop>反応しないでください</span>
+        </p>
+        <p>A:{{a}},B:{{b}}</p>
+        <a v-on:click.prevent="noEvent2" href="https://google.com">Google(prevent)</a>
+        <a v-on:click.stop.prevent="noEvent2" href="https://google.com">Google(stop.prevent)</a>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
