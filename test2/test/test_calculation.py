@@ -46,7 +46,7 @@ class TestCall(object):
         with pytest.raises(ValueError):
             cal.add_num_and_double('1','1')
 
-# @pytest.mark.skip(reason='skip!')
+@pytest.mark.skip(reason='skip!')
 def test_add():
     assert addition(2, 3) == 5
 

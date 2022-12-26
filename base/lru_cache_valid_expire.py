@@ -7,8 +7,7 @@ import requests
 def add():
   print(f"Expired!!!: {datetime.utcnow().isoformat()}")
   r = requests.get('https://www.google.com/')
-  print(r)
-  return
+  return r
 
 
 payload = {'key1': 'value1', 'key2': 'value2'}
