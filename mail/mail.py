@@ -22,7 +22,6 @@ msg['From'] = from_email
 smtp_host = 'smtp.gmail.com'
 smtp_port = 587
 #smtp_password = ''
-#gvdqzmlpdlnifgfk
 
 server = smtplib.SMTP(smtp_host, smtp_port)
 server.starttls()
